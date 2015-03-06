@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="small-4 medium-4 large-4 columns">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="search.title">
+      Sort by:
+     
+      <select ng-model="orderProp" id="input">
+        <option  value="title">Alphabetical</option>
+        <option  value="rank">Rank</option>
+        <option  value="imdbRating">Rating</option>
+      </select>
+      <button ng-click="orderProp='+'-orderProp;orderProp='-'-orderProp; orderProp='+'+orderProp " >Asc
+      </button>
+      <button ng-click="orderProp='+'-orderProp;orderProp='-'-orderProp;orderProp='-'+orderProp" >Desc
+      </button>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="small-4 medium-4 large-4 columns">
+      <!--Body content-->
+
+      <ul class="moive">
+        <li ng-repeat="moive in movies | filter:search:strict | orderBy:[orderProp]">
+          <a href="#/movies/{{moive.imdbID}}" class="thumb"><img ng-src="/data/images/{{moive.imdbID}}.jpg"></a>
+          <a href="#/movies/{{movie.imdbID}}">{{moive.title}}</a>
+          <a>{{moive.rank}}</a>
+          <a>{{moive.imdbRating}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

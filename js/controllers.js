@@ -1,8 +1,17 @@
-var demoApp = angular.module('demoApp', []);
+'use strict';
 
-// demoApp.controller('demoController', ['$scope', '$http', function($scope, $http) {
-//   $http.get('public/data/cs498rk.json').success(function(data) {
-//     $scope.courseInfo = data;
-//     $scope.artistOrder = 'name';
-//   });
-// }]);
+/* Controllers */
+
+var movieControllers = angular.module('movieControllers', []);
+
+movieControllers.controller('MovieListCtrl', ['$scope', '$http',
+  function ($scope, $http) {
+    $http.get('data/imdb250.json').success(function(data) {
+      $scope.movies = data;
+    });
+  }]);
+
+movieControllers.controller('MovieDetailCtrl', ['$scope', '$routeParams',
+  function($scope, $routeParams) {
+    $scope.movieId = $routeParams.movieId;
+  }]);
