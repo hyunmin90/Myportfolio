@@ -1,14 +1,96 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 
+normalText{
+  color:lighten($white,25);
+  text-align:center;
+
+}
 
 h1 {
+  @extend normalText;
   font-size: 2.2rem;
-  color: lighten($orange, 25);
+  margin-top:1rem;
+  color: lighten($white, 25);
+}
+h3{
+  @extend normalText;
+  margin-top:1rem;
+  word-spacing: 1rem;
+
+}
+.header{
+  color:black;
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+h2{
+  @extend normalText;
+
 }
 
+
+
+.movieContents{
+  background:grey;
+
+}
+
+
+.movie-listing.ng-enter,
+.movie-listing.ng-leave,
+.movie-listing.ng-move {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+
+.movie-listing.ng-enter,
+.movie-listing.ng-move {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.movie-listing.ng-move.ng-move-active,
+.movie-listing.ng-enter.ng-enter-active {
+  opacity: 1;
+  height: 120px;
+}
+
+.movie-listing.ng-leave {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.movie-listing.ng-leave.ng-leave-active {
+  opacity: 0;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+.thumb {
+  background-clip:content-box;
+  padding-bottom:3rem;
+  img{
+    height: 135px;
+    width: 100px;
+  }
+  .listText{
+    text-align:center;
+    a{color:white;}
+  
+  
+  }
+  background-color: #3DA6A2 ;
+}
+
+
+.searchBox{
+  width: 100%;
+  height: 2rem;
+
+
+}

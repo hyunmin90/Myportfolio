@@ -1,0 +1,27 @@
+
+
+<div class="row">
+  <div class="column large-12 small-12 medium-12">
+    <button ng-click="Cat=''">All</button>
+    <button ng-click="Cat = 'Action'">Action</button>
+    <button ng-click="Cat='Adventure'">Adventure</button>
+    <button ng-click="Cat='Crime'">Crime</button>
+    <button ng-click="Cat='Comedy'">Comedy</button>
+    <button ng-click="Cat='Drama'">Drama</button>
+    <button ng-click="Cat='Musical'">Musical</button>
+    <button ng-click="Cat='Mystery'">Mystery</button>
+    <button ng-click="Cat='Romance'">Romance</button>
+    <button ng-click="Cat='Sci-Fi'">Sci-Fi</button>
+    <button ng-click="Cat='Thriller'">Thriller</button>
+    <button ng-click="Cat='Western'">Western</button>
+  </div>
+
+</div>
+
+
+<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+  <li ng-repeat="moive in movies | filter:Cat" >
+    <a href="#/movies/{{moive.imdbID}}">  
+      <img ng-src="/data/images/{{moive.imdbID}}.jpg">
+    </a>
+</ul>

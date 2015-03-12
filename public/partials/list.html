@@ -1,32 +1,37 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="small-4 medium-4 large-4 columns">
+    <div class="small-4 medium-4 large-6 small-centered medium-centered large-centered columns">
       <!--Sidebar content-->
-
-      Search: <input ng-model="search.title">
-      Sort by:
+      <br><br><br>
+      Search: <input ng-model="search.title" class="searchBox"><br><br><br>
+      Sort by:<br>
      
       <select ng-model="orderProp" id="input">
         <option  value="title">Alphabetical</option>
         <option  value="rank">Rank</option>
         <option  value="imdbRating">Rating</option>
       </select>
-      <button ng-click="orderProp='+'-orderProp;orderProp='-'-orderProp; orderProp='+'+orderProp " >Asc
+      <button ng-click="isReverse = false " >Asc
       </button>
-      <button ng-click="orderProp='+'-orderProp;orderProp='-'-orderProp;orderProp='-'+orderProp" >Desc
+      <button ng-click="isReverse = true " >Desc
       </button>
     </div>
   </div>
   <div class = "row">
-    <div class="small-4 medium-4 large-4 columns">
+    <div class="small-4 medium-4 large-6 small-centered medium-centered large-centered columns">
       <!--Body content-->
 
       <ul class="moive">
-        <li ng-repeat="moive in movies | filter:search:strict | orderBy:[orderProp]">
-          <a href="#/movies/{{moive.imdbID}}" class="thumb"><img ng-src="/data/images/{{moive.imdbID}}.jpg"></a>
-          <a href="#/movies/{{movie.imdbID}}">{{moive.title}}</a>
-          <a>{{moive.rank}}</a>
-          <a>{{moive.imdbRating}}</a>
+        <li ng-repeat="moive in movies | filter:search:strict | orderBy:orderProp: isReverse" class="thumb movie-listing large-12 row">
+          <a href="#/movies/{{moive.imdbID}}" class="large-4 columns">  
+            <img ng-src="/data/images/{{moive.imdbID}}.jpg">
+          </a>
+          <div class="large-8 columns listText"><br>
+            <h2>Title: {{moive.title}}</h2><br><br>
+            <a>Rank: {{moive.rank}}</a><br><br>
+            <a>Rating: {{moive.imdbRating}}</a><br>
+          </div>
+          
         </li>
       </ul>
     </div>

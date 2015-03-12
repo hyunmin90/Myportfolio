@@ -1,6 +1,7 @@
 var movieApp = angular.module('movieApp', [
   'ngRoute',
   'movieControllers',
+  'movieAnimations',
 ]);
 
 movieApp.config(['$routeProvider',
@@ -10,8 +11,12 @@ movieApp.config(['$routeProvider',
         templateUrl: 'partials/list.html',
         controller: 'MovieListCtrl'
       }).
+      when('/movies/gallery', {
+        templateUrl: 'partials/gallery.html',
+        controller: 'MovieGalleryCtrl'
+      }).
       when('/movies/:movieId', {
-        templateUrl: 'partials/detail.html',
+        templateUrl: 'partials/details.html',
         controller: 'MovieDetailCtrl'
       }).
       otherwise({

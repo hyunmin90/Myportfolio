@@ -1,0 +1,155 @@
+@import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+
+body {
+    background-color: black !important;
+}
+
+
+.basetext{
+  letter-spacing: 0.5rem;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  line-height: 1.1;
+  font-weight: lighter;
+}
+
+.name{
+  @extend .basetext;
+  margin-left:0.85rem !important;
+}
+
+
+h1{
+  @extend .basetext;
+  text-align:center;
+  font-size:2.75rem;
+  color:#fff ;
+}
+
+.aboutme{
+  
+  @extend .basetext;
+  letter-spacing: 0.2rem;
+  float:left !important;
+  background:black;
+  height:100%;
+  text-align:right;
+
+}
+
+
+.contents{
+  background:black;
+  color:black;
+  height:100%;
+}
+
+.valign-middle {
+    @extend .basetext;
+    color:white;
+    margin-top:3rem;
+    height:100%;
+}
+.carousel{
+  margin-top: 1rem;
+
+}
+.slick-dots{
+  li {
+    button:before{
+      color:white;}
+  }
+
+  .slick-active {
+    button:before{
+      color:white !important; 
+
+    }
+  } 
+}
+
+.experience{
+  padding-top:5rem;
+  padding-bottom:3rem;
+}
+
+.logo{
+    height: 164px;
+    width: 260px;
+}
+
+.top-bar-section{ 
+  ul{ 
+    li>a{
+      @extend .basetext
+    
+    }
+  }
+}
+
+
+
+.slick-prev{
+  left: 0px !important;
+}
+.slick-next{
+  right:0px !important;
+
+}
+
+#middlebg{
+  background: url("/data/images/mdbackground.png") top right no-repeat;
+  background-position-x: 50%;
+  width: 100%;
+  height: 500px;
+  background-attachment: fixed;
+}
+
+.modal{
+  background-color:black !important;
+
+}
+
+#downarrow{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:-10rem;
+}
+
+
+video{
+  opacity: 0.5;
+  
+}
+
+
+.container { position:relative; }
+.container video {
+    position:relative;
+    z-index:0;
+}
+.overlay {
+
+    top:0;
+    left:0;
+    z-index:1;
+}
+.videotext{
+  
+  position: absolute !important;
+  margin-top: 24% !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+
+.Startbutton{
+  z-index:10;
+  opacity: 0.5;
+  background-color:white !important;
+  color:dimgrey !important;
+
+
+}
