@@ -1,11 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="portfolioApp">
 <head>
   <meta charset="UTF-8">
   <title>Steve Hyounmin Wang</title>
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
-  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
+  <script src="/js/controllers.js"></script>
+  <script src="js/app.js"></script>
+  <script src="lib/angular-animate/angular-animate.js"></script>
   <script src="lib/slick/src/screenfull.js"></script>
   <script src="js/controllers.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
@@ -26,7 +30,7 @@
 
 
 <body>
-  
+
 
   <div class="contain-to-grid fixed">
 	<nav class="top-bar " data-topbar role="navigation">
@@ -97,19 +101,19 @@
       
       <h1> PAST</h1>
       <div class=" fade large-12 medium-12 small-12 large-centered medium-centered carousel columns">
-        <div><img src="https://farm8.staticflickr.com/7481/16028567175_8057eb2361.jpg"></img></div>
-        <div><img src="https://farm8.staticflickr.com/7375/16309138960_56236c3e75.jpg"></img></div>
-        <div><img src="https://farm8.staticflickr.com/7381/15748008384_23573a51ae.jpg"></img></div>
-        <div><img src="https://farm8.staticflickr.com/7413/16369555122_11133bfe5e.jpg"></img></div>
-        <div><img src="https://farm8.staticflickr.com/7427/16368729451_d252e4d636.jpg"></img></div>
-        <div><img src="https://farm9.staticflickr.com/8658/16067261208_c5d6663553.jpg"></img></div>
-        <div><img src="https://farm8.staticflickr.com/7528/15448293134_5d4a9e64e8.jpg"></img></div>
-        <div><img src="https://farm9.staticflickr.com/8630/15427934244_a1846bafa8.jpg"></img></div>
-        <div><img src="https://farm9.staticflickr.com/8630/16346845888_f4dc90a548.jpg"></img></div>
-        <div><img src="https://farm8.staticflickr.com/7556/15857179279_9c8f751a12.jpg"></img></div>
+        <div><img src="data/images/image1.jpg"></img></div>
+        <div><img src="data/images/image2.jpg"></img></div>
+        <div><img src="data/images/image3.jpg"></img></div>
+        <div><img src="data/images/image4.jpg"></img></div>
+        <div><img src="data/images/image5.jpg"></img></div>
+        <div><img src="data/images/image6.jpg"></img></div>
+        <div><img src="data/images/image7.jpg"></img></div>
+        <div><img src="data/images/image8.jpg"></img></div>
+        <div><img src="data/images/image9.jpg"></img></div>
+        <div><img src="data/images/image10.jpg"></img></div>
       </div>
       <h2 id="copyright">Steve Wang photography ® all right reserved</h2>
-    
+      <hr>
     </div>
     
     <div class="row">
@@ -125,14 +129,16 @@
 
     
     <div class ="row experience medium-centered small-centered" id="experience">
+      <hr>
       <h1 id="experience">Experience</h1>
             
       
         <div class="large-4 small-6 medium-4 large-uncentered medium-centered small-centered columns"><a href="#" data-reveal-id="modal1" ><img class="logo" src="./data/images/daumkakao.jpg"></a></div>
         <div id="modal1" class="reveal-modal modal" data-reveal>
           <h1>Daum Kakao</h1>
-          <p class="lead">Your couch.  It is mine.</p>
-          <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+          <p class="lead">Software Intern Co-op,Daum Kakao</p><br>
+          <p>Worked in API platform team where we made tools and <br><br> documents to help developers use our API and SDK.</p> <br>
+          <p>Projects: Oauth Playground, IaaS Daum Developers cloud</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
         
@@ -141,8 +147,8 @@
         <div class="large-4 small-6 medium-4 large-uncentered small-centered columns"><a href="#" data-reveal-id="modal2" ><img class="logo" src="http://jazarah.net/wp-content/uploads/2014/01/Sony-Logo.jpg"></a></div>
         <div id="modal2" class="reveal-modal modal" data-reveal>
           <h1>Sony Mobile</h1>
-          <p class="lead">Your couch.  It is mine.</p>
-          <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+          <p class="lead">Sony Mobile, Technical Account Team Intern</p><br>
+          <p>Developed algorithm for Korean consonant search for phonebook installed <br><br>in xperia arc which then was later developed in R&D center for Sony Mobile <br><br> native android application.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
       
@@ -152,16 +158,27 @@
         <div class="large-4 small-6 medium-4 large-uncentered small-centered columns"><a href="#" data-reveal-id="modal3" ><img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Logo_of_the_South_Korean_Air_Force.png/240px-Logo_of_the_South_Korean_Air_Force.png"></a></div>
         <div id="modal3" class="reveal-modal modal" data-reveal>
           <h1>Korea Airforce</h1>
-          <p class="lead">Your couch.  It is mine.</p>
-          <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+          <p class="lead">Server Operator</p><br>
+          <p>Maintained about 30 server management programs. Monitored and troubleshot the daily problems<br><br> that server encountered including server failure, heavy traffics and database locks.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
-      
+      <hr>
       
     </div>
 
- 
+    <div class ="row medium-centered small-centered" id="githubInfo">
+      <li ng-repeat="repo in repos " class="large-12 repeated-item row">
+
+          <div class="large-8 columns listText"><br>
+            <h2>Title: {{repo.id}}</h2><br><br>
+            <a>Rank: {{repo.name}}</a><br><br>
+            <a>Rating: {{repo.name}}</a><br>
+          </div>
+          
+        </li>  
     
+  </div>
+
     
   </div>
   
@@ -188,12 +205,8 @@
    $(document).foundation();
     });
     
-  var callbackFunction = function(data) {
-    var wind = data.query.results.channel.wind;
-    alert(wind.chill);
-  };
 </script>
- 
+
 
 </body>
 </html>

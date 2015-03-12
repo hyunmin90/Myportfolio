@@ -4,6 +4,19 @@
 
 var movieControllers = angular.module('movieControllers', []);
 
+var portfolioControllers = angular.module('portfolioControllers',[]);
+
+
+portfolioControllers.controller('MeCtrl', ['$scope', '$http',
+  function ($scope, $http) {
+    
+    $http.get('https://api.github.com/users/hyunmin90/repos?json').success(function(data) {
+      alert(data);
+      
+    });
+    
+  }]);
+
 movieControllers.controller('MovieListCtrl', ['$scope', '$http',
   function ($scope, $http) {
     $http.get('data/imdb250.json').success(function(data) {

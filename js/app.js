@@ -4,6 +4,28 @@ var movieApp = angular.module('movieApp', [
   'movieAnimations',
 ]);
 
+var portfolioApp = angular.module('portfolioApp', [
+  'ngRoute',
+  'portfolioControllers',
+  'movieControllers',
+]);
+
+
+portfolioApp.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/', {
+        templateUrl: 'index.html',
+        controller: 'MeCtrl'
+      }).
+      otherwise({
+        templateUrl: './index.html',
+        controller: 'MeCtrl'
+      });
+  }]);
+
+
+
 movieApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
@@ -23,7 +45,11 @@ movieApp.config(['$routeProvider',
         templateUrl: 'partials/coverflow.html',
         controller: 'CoverFlowCtrl'
       }).
+      when('/', {
+        templateUrl: 'partials/list.html',
+        controller: 'MovieListCtrl'
+      }).
       otherwise({
-        redirectTo: '/movies'
+        redirectTo: '/'
       });
   }]);

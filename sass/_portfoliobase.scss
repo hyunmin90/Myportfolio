@@ -180,3 +180,16 @@ a{
   font-size: 3rem;
   letter-spacing: 2rem;
 }
+
+
+.modal1{
+  color: white;
+}
+
+p{
+  @extend .basetext;
+  letter-spacing: 0.2rem !important;
+  color: white !important;
+  text-align:center;
+
+}
