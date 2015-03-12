@@ -15,12 +15,16 @@ portfolioApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
+        reloadOnSearch: false,
         templateUrl: './partials/repos.html',
         controller: 'MeCtrl'
       }).
       otherwise({
+        reloadOnSearch: false,
         templateUrl: './index.html',
-        controller: 'MeCtrl'
+        controller: 'MeCtrl',
+        
+        
       });
   }]);
 
