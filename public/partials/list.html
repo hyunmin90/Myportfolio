@@ -22,7 +22,7 @@
       <!--Body content-->
 
       <ul class="moive">
-        <li ng-repeat="moive in movies | filter:search:strict | orderBy:orderProp: isReverse" class="thumb movie-listing large-12 row">
+        <li ng-repeat="moive in movies | filter:search:strict | orderBy:orderProp: isReverse" class="thumb movie-listing large-12 repeated-item row">
           <a href="#/movies/{{moive.imdbID}}" class="large-4 columns">  
             <img ng-src="/data/images/{{moive.imdbID}}.jpg">
           </a>
