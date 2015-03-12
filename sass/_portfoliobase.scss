@@ -193,3 +193,10 @@ p{
   text-align:center;
 
 }
+
+h2{
+  @extend .basetext;
+  color:white;
+  text-align:center;
+
+}

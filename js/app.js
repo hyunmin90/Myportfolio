@@ -15,7 +15,7 @@ portfolioApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'index.html',
+        templateUrl: './partials/repos.html',
         controller: 'MeCtrl'
       }).
       otherwise({

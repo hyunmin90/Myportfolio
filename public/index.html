@@ -47,6 +47,7 @@
             <li><a onclick="clickedScroll('me')">Me</a></li>
             <li><a onclick="clickedScroll('past')">Past</a></li>
             <li><a onclick="clickedScroll('experience')">Experience</a></li>
+            <li><a onclick="clickedScroll('projects')">Projects</a></li>
           </ul>
     </section>
 	</nav>
@@ -179,8 +180,12 @@
     
   </div>
 
-    
+  <div class="view-container">
+    <div ng-view class="view-frame"></div>
   </div>
+  </div>
+
+
   
   
    

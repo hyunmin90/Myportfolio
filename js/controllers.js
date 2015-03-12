@@ -11,8 +11,7 @@ portfolioControllers.controller('MeCtrl', ['$scope', '$http',
   function ($scope, $http) {
     
     $http.get('https://api.github.com/users/hyunmin90/repos?json').success(function(data) {
-      alert(data);
-      
+        $scope.repos = data;
     });
     
   }]);
