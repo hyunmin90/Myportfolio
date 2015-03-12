@@ -24,6 +24,17 @@ movieControllers.controller('MovieGalleryCtrl', ['$scope', '$http',
       
   }]);
 
+movieControllers.controller('CoverFlowCtrl', ['$scope', '$http',
+  function ($scope, $http) {
+    $http.get('data/imdb250.json').success(function(data) {
+      $scope.movies = data;
+    });
+      
+     $('.coverflow').coverflow(); 
+      
+  }]);
+
+
 
 movieControllers.controller('MovieDetailCtrl', ['$scope', '$routeParams','$http',
   function($scope, $routeParams,$http) {

@@ -22,9 +22,9 @@ body {
 
 h1{
   @extend .basetext;
-  text-align:center;
-  font-size:2.75rem;
-  color:#fff ;
+  text-align:center !important;
+  font-size:2.75rem !important;
+  color:#fff !important;
 }
 
 .aboutme{
@@ -121,6 +121,7 @@ h1{
 
 video{
   opacity: 0.5;
+  margin-bottom:5%
   
 }
 
@@ -139,7 +140,7 @@ video{
 .videotext{
   
   position: absolute !important;
-  margin-top: 24% !important;
+  margin-top: 20% !important;
   text-align: center !important;
   width: 100%;
 }
@@ -151,5 +152,19 @@ video{
   background-color:white !important;
   color:dimgrey !important;
 
+
+}
+
+
+#past{
+  padding-top:7%;
+
+
+}
+
+#copyright{
+  color:grey;
+  text-align:center;
+  padding-bottom:2rem;
 
 }

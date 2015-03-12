@@ -1,0 +1,15 @@
+
+
+
+<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4 coverflow">
+  <li ng-repeat="moive in movies" >
+    <a href="#/movies/{{moive.imdbID}}">  
+      <img ng-src="/data/images/{{moive.imdbID}}.jpg">
+    </a>
+  </li>
+</ul>
+
+<script>
+    coverflowclick();
+
+</script>

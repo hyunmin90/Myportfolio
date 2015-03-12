@@ -13,20 +13,22 @@
   <link rel="stylesheet" href="foundation/css/foundation.css">
   <script src="foundation/js/foundation.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script src="js/main.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.4.1/slick-theme.css">
   <link rel="stylesheet" href="css/portfolio.css">
-  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="lib/foundation-icon-fonts/foundation-icons.css">
 
 </head>
 
 
 <body>
   
-  
-  
+
   <div class="contain-to-grid fixed">
 	<nav class="top-bar " data-topbar role="navigation">
 	  <ul class="title-area">
@@ -53,7 +55,15 @@
     
      
     <div>
-        <h1 class="videotext">Know More about Me<br><button class="Startbutton" onclick="clickedScroll('me')">more</button></h1>
+		<h1 class="cd-headline rotate-1 videotext">
+			<span>I Love</span>
+			<span class="cd-words-wrapper">
+				<b class="is-visible">Photography</b>
+				<b>Technology</b>
+				<b>Design</b>
+			</span><br>
+          	 <button class="Startbutton" onclick="clickedScroll('me')">Know more</button>
+		</h1>
       <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" class="large-12 medium-12 small-12">
              <source src="./data/movie.mp4" type="video/mp4">
              <source src="http://demosthenes.info/assets/videos/polina.webm" type="video/webm">
@@ -61,7 +71,6 @@
       </video>
       
     </div>
-    
     
     
       
@@ -72,7 +81,12 @@
       <div class="large-8 small-12 medium-12 columns valign-middle"> 
           <h1 id="about"><img src="./data/images/aboutme.png"></img></h1>
           <div class="large-4 medium-4 small-4 small-centered medium-centered columns aboutme"><img src="./data/images/myname.png"></img></div>
-          <div class="large-6 medium-4 small-6 small-centered medium-centered  columns aboutme">UI/UX enthusiast<br><br>Amateur Photographer<br><br>Programmer<br><br>Web enthusiast<br><br>Entrepreneur<br><br>From S.Korea<br><br>Always miss Jeju</div>
+          <div class="large-6 medium-4 small-6 small-centered medium-centered  columns aboutme">UI/UX enthusiast<br><br>Amateur Photographer<br><br>Programmer<br><br>Web enthusiast<br><br>Entrepreneur<br><br>From S.Korea<br><br>hyunmin90@gmail.com<br><br>+1-217-418-8803<br><br>
+    </div>
+        <h1><i class="fi-social-linkedin large"></i></h1><h1><i class="fi-social-facebook large"></i></h1><h1><i class="fi-social-github large"></i></h1>
+
+
+
       </div>
       
     </div>
@@ -80,6 +94,8 @@
     
     <div class="row" id="past">
       <hr>
+      
+      <h1> PAST</h1>
       <div class=" fade large-12 medium-12 small-12 large-centered medium-centered carousel columns">
         <div><img src="https://farm8.staticflickr.com/7481/16028567175_8057eb2361.jpg"></img></div>
         <div><img src="https://farm8.staticflickr.com/7375/16309138960_56236c3e75.jpg"></img></div>
@@ -92,6 +108,8 @@
         <div><img src="https://farm9.staticflickr.com/8630/16346845888_f4dc90a548.jpg"></img></div>
         <div><img src="https://farm8.staticflickr.com/7556/15857179279_9c8f751a12.jpg"></img></div>
       </div>
+      <h2 id="copyright">Steve Wang photography ® all right reserved</h2>
+    
     </div>
     
     <div class="row">
@@ -175,7 +193,7 @@
     alert(wind.chill);
   };
 </script>
- <script src="https://query.yahooapis.com/v1/public/yql?q=select wind from weather.forecast where woeid in (select woeid from geo.places(1) where text='chicago, il')&format=json&callback=callbackFunction"></script>
+ 
 
 </body>
 </html>

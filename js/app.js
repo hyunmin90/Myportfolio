@@ -19,6 +19,10 @@ movieApp.config(['$routeProvider',
         templateUrl: 'partials/details.html',
         controller: 'MovieDetailCtrl'
       }).
+      when('/coverflow', {
+        templateUrl: 'partials/coverflow.html',
+        controller: 'CoverFlowCtrl'
+      }).
       otherwise({
         redirectTo: '/movies'
       });
