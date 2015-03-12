@@ -30,23 +30,23 @@ movieApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/movies', {
-        templateUrl: 'partials/list.html',
+        templateUrl: './partials/list.html',
         controller: 'MovieListCtrl'
       }).
       when('/movies/gallery', {
-        templateUrl: 'partials/gallery.html',
+        templateUrl: './partials/gallery.html',
         controller: 'MovieGalleryCtrl'
       }).
       when('/movies/:movieId', {
-        templateUrl: 'partials/details.html',
+        templateUrl: './partials/details.html',
         controller: 'MovieDetailCtrl'
       }).
       when('/coverflow', {
-        templateUrl: 'partials/coverflow.html',
+        templateUrl: './partials/coverflow.html',
         controller: 'CoverFlowCtrl'
       }).
       when('/', {
-        templateUrl: 'partials/list.html',
+        templateUrl: './partials/list.html',
         controller: 'MovieListCtrl'
       }).
       otherwise({
