@@ -2,31 +2,40 @@
 <html lang="en" ng-app="portfolioApp">
 <head>
   <meta charset="UTF-8">
-  <title>Steve Hyounmin Wang</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="shortcut icon" type="image/png" href="./data/images"/>
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+  
+  <script src="lib/jquery-2.1.3.min/index.js"></script>
+  <script src="lib/jqueryui/jquery-ui.min.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.min.js"></script>
-  <script src="/js/controllers.js"></script>
-  <script src="js/app.js"></script>
   <script src="lib/angular-animate/angular-animate.js"></script>
   <script src="lib/slick/src/screenfull.js"></script>
+
+  
   <script src="js/controllers.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
-  <link rel="stylesheet" href="foundation/css/foundation.css">
-  <script src="./foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
   <script src="js/script.js"></script>
   <script src="js/modernizr.js"></script>
   <script src="js/main.js"></script>
-  <script src="http://localhost:35729/livereload.js"></script>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="js/script.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script src="js/main.js"></script>
+  
+  
+  <script src="foundation/js/foundation.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
+  
+  <link rel="stylesheet" href="foundation/css/foundation.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.4.1/slick-theme.css">
   <link rel="stylesheet" href="css/portfolio.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="lib/foundation-icon-fonts/foundation-icons.css">
-
+  
+  <title>Steve Hyounmin Wang</title>
+  
 </head>
 
 
@@ -39,68 +48,62 @@
 	    <li class="name">
 	      <h2 class="name">STEVE WANG</h1>
 	    </li>
-	     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 	    <li class="toggle-topbar menu-icon"><a href="#/"><span></span></a></li>
 	  </ul>
 
 	  <section class="top-bar-section">
-          <ul class="right">
-            <li><a onclick="clickedScroll('me')">Me</a></li>
-            <li><a onclick="clickedScroll('past')">Past</a></li>
-            <li><a onclick="clickedScroll('experience')">Experience</a></li>
-            <li><a onclick="clickedScroll('projects')">Projects</a></li>
-          </ul>
-    </section>
+        <ul class="right">
+          <li><a onclick="clickedScroll('me')">Me</a></li>
+          <li><a onclick="clickedScroll('past')">Past</a></li>
+          <li><a onclick="clickedScroll('experience')">Experience</a></li>
+          <li><a onclick="clickedScroll('projects')">Projects</a></li>
+        </ul>
+      </section>
 	</nav>
   </div>
   
   
   
   <div class="contents container">
-    
-     
-    <div>
-		<h1 class="cd-headline rotate-1 videotext">
-			<span>I Love</span>
-			<span class="cd-words-wrapper">
-				<b class="is-visible">Photography</b>
-				<b>Technology</b>
-				<b>Design</b>
-			</span><br>
-          	 <button class="Startbutton" onclick="clickedScroll('me')">Know more</button>
-		</h1>
-      <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" class="large-12 medium-12 small-12">
-             <source src="./data/movie.mp4" type="video/mp4">
-             <source src="http://demosthenes.info/assets/videos/polina.webm" type="video/webm">
-                  If you see this, your browser does not support video
-      </video>
-      
-    </div>
-    
-    
-      
+    <h1 class="cd-headline rotate-1 videotext">
+      <span>I Love</span>
+      <span class="cd-words-wrapper">
+      <b class="is-visible">Photography</b>
+      <b>Technology</b>
+      <b>Design</b>
+      </span><br>
+      <button class="Startbutton" onclick="clickedScroll('me')">Know more</button>
+    </h1>
+    <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" class="large-12 medium-12 small-12">
+      <source src="./data/movie.mp4" type="video/mp4">
+      <source src="http://demosthenes.info/assets/videos/polina.webm" type="video/webm">
+      If you see this, your browser does not support video
+    </video>
     
     <div class="row" id="me">
       <hr>
       <div class="large-4 small-7 medium-7 columns"><img src="./data/images/me.jpg"></div>
       <div class="large-8 small-12 medium-12 columns valign-middle"> 
           <h1 id="about"><img src="./data/images/aboutme.png"></img></h1>
-          <div class="large-4 medium-4 small-4 small-centered medium-centered columns aboutme"><img src="./data/images/myname.png"></img></div>
-          <div class="large-6 medium-4 small-6 small-centered medium-centered  columns aboutme">UI/UX enthusiast<br><br>Amateur Photographer<br><br>Programmer<br><br>Web enthusiast<br><br>Entrepreneur<br><br>From S.Korea<br><br>hyunmin90@gmail.com<br><br>+1-217-418-8803<br><br>
-          <div id="icon">  <a href="https://www.linkedin.com/pub/hyounmin-wang/35/438/643"><i class="fi-social-linkedin large"></a></i><a href="https://www.facebook.com/hyounmin.wang"><i class="fi-social-facebook large"></i></a><a href="http://github.com/hyunmin90"><i class="fi-social-github large"></i></a><a href="https://www.flickr.com/photos/33597632@N07/"><i class="fi-social-flickr large"></i></a></div>
-    </div>
-    
-
-
-
+          <div class="large-4 medium-4 small-4 small-centered medium-centered columns aboutme">
+            <img src="./data/images/myname.png"></img>
+          </div>
+          <div class="large-6 medium-4 small-6 small-centered medium-centered  columns aboutme">
+            UI/UX enthusiast<br><br>Amateur Photographer<br><br>Programmer<br><br>Web enthusiast<br><br>Entrepreneur<br>
+            <br>From S.Korea<br><br>hyunmin90@gmail.com<br><br>+1-217-418-8803<br><br>
+          </div>
+          <div id="icon"><a href="https://www.linkedin.com/pub/hyounmin-wang/35/438/643">
+            <i class="fi-social-linkedin large"></a></i>
+            <a href="https://www.facebook.com/hyounmin.wang"><i class="fi-social-facebook large"></i></a>
+            <a href="http://github.com/hyunmin90"><i class="fi-social-github large"></i></a>
+            <a href="https://www.flickr.com/photos/33597632@N07/"><i class="fi-social-flickr large"></i></a>
+          </div>
       </div>
-      
     </div>
     
     
     <div class="row" id="past">
       <hr>
-      
       <h1> PAST</h1>
       <div class=" fade large-12 medium-12 small-12 large-centered medium-centered carousel columns">
         <div><img src="data/images/image1.jpg"></img></div>
@@ -133,75 +136,53 @@
     <div class ="row experience medium-centered small-centered" id="experience">
       <hr>
       <h1 id="experience">Experience</h1>
-            
-      
-        <div class="large-4 small-6 medium-4 large-uncentered medium-centered small-centered columns"><a href="#/" data-reveal-id="modal1" ><img class="logo" src="./data/images/daumkakao.jpg"></a></div>
-        <div id="modal1" class="reveal-modal modal" data-reveal>
-          <h1>Daum Kakao</h1>
-          <p class="lead">Software Intern Co-op,Daum Kakao</p><br>
-          <p>Worked in API platform team where we made tools and <br><br> documents to help developers use our API and SDK.</p> <br>
-          <p>Projects: Oauth Playground, IaaS Daum Developers cloud</p>
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
-        
-      
-      
-        <div class="large-4 small-6 medium-4 large-uncentered small-centered columns"><a href="#/" data-reveal-id="modal2" ><img class="logo" src="http://jazarah.net/wp-content/uploads/2014/01/Sony-Logo.jpg"></a></div>
-        <div id="modal2" class="reveal-modal modal" data-reveal>
+      <div class="large-4 small-6 medium-4 large-uncentered medium-centered small-centered columns">
+        <a href="#/" data-reveal-id="modal1" ><img class="logo" src="./data/images/daumkakao.jpg"></a>
+      </div>
+      <div id="modal1" class="reveal-modal modal" data-reveal>
+        <h1>Daum Kakao</h1>
+        <p class="lead">Software Intern Co-op,Daum Kakao</p><br>
+        <p>Worked in API platform team where we made tools and <br><br> documents to help developers use our API and SDK.</p> <br>
+        <p>Projects: Oauth Playground, IaaS Daum Developers cloud</p>
+        <a class="close-reveal-modal">&#215;</a>
+      </div>
+      <div class="large-4 small-6 medium-4 large-uncentered small-centered columns">
+        <a href="#/" data-reveal-id="modal2" ><img class="logo" src="http://jazarah.net/wp-content/uploads/2014/01/Sony-Logo.jpg"></a>
+      </div>
+      <div id="modal2" class="reveal-modal modal" data-reveal>
           <h1>Sony Mobile</h1>
           <p class="lead">Sony Mobile, Technical Account Team Intern</p><br>
-          <p>Developed algorithm for Korean consonant search for phonebook installed <br><br>in xperia arc which then was later developed in R&D center for Sony Mobile <br><br> native android application.</p>
+          <p>Developed algorithm for Korean consonant search for phonebook installed<br>
+          <br>in xperia arc which then was later developed in R&D center for Sony Mobile <br>
+          <br> native android application.
+          </p>
           <a class="close-reveal-modal">&#215;</a>
-        </div>
+      </div>
       
+      <div class="large-4 small-6 medium-4 large-uncentered small-centered columns">
+        <a href="#/" data-reveal-id="modal3" >
+          <img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Logo_of_the_South_Korean_Air_Force.png/240px-Logo_of_the_South_Korean_Air_Force.png">
+        </a>
+      </div>
+      <div id="modal3" class="reveal-modal modal" data-reveal>
+        <h1>Korea Airforce</h1>
+        <p class="lead">Server Operator</p><br>
+        <p>Maintained about 30 server management programs. Monitored and troubleshot the daily problems<br>
+        <br> that server encountered including server failure, heavy traffics and database locks.</p>
+        <a class="close-reveal-modal">&#215;</a>
+      </div>
       
-      
-      
-        <div class="large-4 small-6 medium-4 large-uncentered small-centered columns"><a href="#/" data-reveal-id="modal3" ><img class="logo" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Logo_of_the_South_Korean_Air_Force.png/240px-Logo_of_the_South_Korean_Air_Force.png"></a></div>
-        <div id="modal3" class="reveal-modal modal" data-reveal>
-          <h1>Korea Airforce</h1>
-          <p class="lead">Server Operator</p><br>
-          <p>Maintained about 30 server management programs. Monitored and troubleshot the daily problems<br><br> that server encountered including server failure, heavy traffics and database locks.</p>
-          <a class="close-reveal-modal">&#215;</a>
-        </div>
       <hr>
       
     </div>
 
 
 
-  <div class="view-container">
-    <div ng-view class="view-frame"></div>
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
+
   </div>
-  </div>
-
-
-  
-  
-   
-  <script> 
-    $('.fade').slick({
-      infinite:true,
-      slidesToShow:3,
-      cssEase: 'linear',
-
-    });
-    
-    clickedScroll= function(id){
-    
-    
-      $('html, body').animate({
-          scrollTop: $("#"+id).offset().top
-      }, 2000); 
-    
-    };
-    
-    $(function() {
-   $(document).foundation();
-    });
-    
-</script>
-
-
+<script src="js/script.js"></script>
 </body>
 </html>
